@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.websocket_demo.client.mainGUI">
+   <left>
+      <HBox prefHeight="702.0" prefWidth="408.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="92.0" styleClass="dark-gray-background" stylesheets="@values/style.css">
+               <children>
+                  <Pane prefHeight="142.0" prefWidth="92.0" VBox.vgrow="ALWAYS" />
+                  <Pane fx:id="messagesChatSectionContainer" prefHeight="57.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fx:id="messagesChatSection" fitHeight="39.0" fitWidth="42.0" layoutX="27.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MessageIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="groupChatSectionContainer" prefHeight="57.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fx:id="groupChatSection" fitHeight="39.0" fitWidth="42.0" layoutX="27.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@groupChatIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="singleChatSectionContainer" prefHeight="57.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fx:id="singleChatSection" fitHeight="39.0" fitWidth="42.0" layoutX="27.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@singleChat.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="settingsIconContainer" prefHeight="57.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fx:id="settingsIcon" fitHeight="39.0" fitWidth="42.0" layoutX="27.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@settingsIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane prefHeight="233.0" prefWidth="92.0" VBox.vgrow="ALWAYS" />
+                  <Pane fx:id="logOutIconContainer" prefHeight="57.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fx:id="logOutIcon" fitHeight="39.0" fitWidth="42.0" layoutX="27.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logOutIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="userTabsContainer" prefHeight="702.0" prefWidth="315.0" styleClass="gray-background" stylesheets="@values/style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="200.0" stylesheets="@values/style.css">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@searchIcon.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField prefHeight="26.0" prefWidth="206.0" promptText="Search" styleClass="transparent-background" stylesheets="@values/style.css">
+                           <font>
+                              <Font name="Ebrima" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="dark-gray-background" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="2.0" prefWidth="200.0" styleClass="dark-gray-background" stylesheets="@values/style.css" />
+                  <HBox fx:id="userTabs" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="323.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Profile_Picture.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="168.0">
+                           <children>
+                              <Label fx:id="usernameLabel" prefHeight="26.0" prefWidth="169.0" text="Rommards" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="msgPlaceholder" prefHeight="26.0" prefWidth="169.0" text="You: GoodMorning kuya" textFill="#9da7a7">
+                                 <font>
+                                    <Font name="Ebrima" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Pane fx:id="activeUserIndicator" prefHeight="100.0" prefWidth="58.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="42.0" textFill="WHITE" />
+                              <Circle fill="#50c984" layoutX="29.0" layoutY="51.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label layoutX="26.0" layoutY="42.0" text="1" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="598.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="138.0" text="Rommards" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Circle fill="#50c984" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label prefHeight="26.0" prefWidth="64.0" text="Online" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Pane prefHeight="82.0" prefWidth="307.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@infoIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@menuIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="615.0" prefWidth="598.0" styleClass="transparent-background" stylesheets="@values/style.css">
+               <content>
+                  <Pane prefHeight="606.0" prefWidth="596.0" styleClass="light-gray-background" stylesheets="@values/style.css">
+                     <children>
+                        <Pane layoutX="-1.0" prefHeight="167.0" prefWidth="599.0">
+                           <children>
+                              <ImageView fitHeight="97.0" fitWidth="95.0" layoutX="252.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Profile_Picture.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="215.0" layoutY="127.0" prefHeight="26.0" prefWidth="169.0" text="Rommards" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-1.0" layoutY="181.0" prefHeight="83.0" prefWidth="599.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Profile_Picture.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="68.0" layoutY="30.0" prefHeight="30.0" prefWidth="83.0" styleClass="incoming-bubble" stylesheets="@values/style.css" text="Hello!!" textFill="#9da7a7">
+                                 <font>
+                                    <Font name="Ebrima" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-1.0" layoutY="264.0" prefHeight="83.0" prefWidth="599.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="540.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Profile_Picture.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="400.0" layoutY="30.0" prefHeight="30.0" prefWidth="131.0" styleClass="outgoing-bubble" stylesheets="@values/style.css" text="yah! Hello :)" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-1.0" layoutY="347.0" prefHeight="131.0" prefWidth="599.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Profile_Picture.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="68.0" layoutY="21.0" prefHeight="76.0" prefWidth="269.0" styleClass="incoming-bubble" stylesheets="@values/style.css" text="Ka group nga pala kita sa Final&#10;Project sa Java!" textFill="#9da7a7">
+                                 <font>
+                                    <Font name="Ebrima" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="598.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@emoji_Icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@uploadIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField prefHeight="38.0" prefWidth="454.0" promptText="Message here..." styleClass="light-gray-background" stylesheets="@values/style.css">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sendMsgIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
